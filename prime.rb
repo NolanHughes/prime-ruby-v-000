@@ -1,16 +1,16 @@
-def prime?(num)
-  if num <= 1
-    return false
-  end
-  
-  Math.sqrt(num).to_i.downto(2).each do |i|
-    if num % i == 0
-      return false
-    end
-  end
-  
-  true
-end
+# def prime?(num)
+#   if num <= 1
+#     return false
+#   end
+# 
+#   Math.sqrt(num).to_i.downto(2).each do |i|
+#     if num % i == 0
+#       return false
+#     end
+#   end
+#   
+#   true
+# end
 
 def sieve(max)
   # Set up an array with all the numbers from 0 to the max
@@ -26,7 +26,7 @@ def sieve(max)
     # Skip if nil
     next unless p
 
-    # Break if we are past the square root of the max value 
+    # Break if we are past the square root of the max value
     break if p*p > max
     counter += 1
     # Start at the square of the current number, and step through.
